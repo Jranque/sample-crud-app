@@ -1,0 +1,247 @@
+.App {
+  margin: auto;
+  width: 50%;
+}
+.h2 {
+  text-align: center;
+}
+.myForm {
+  left: 25%;
+  width: 200%;
+  padding: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+  padding-bottom: 60px;
+  margin-left: -70%;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 1px;
+}
+.Form {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.formField {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.formField1 {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.Mybutton {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px 20px;
+  background-color: #00000050;
+  border: 0;
+  font-weight: bold;
+  color: white;
+}
+.Mybutton:hover {
+  background-color: #00968880;
+  box-shadow: 0px 0px 2px 0px;
+  border: 1px solid #009688;
+  animation: wiggle 0.3s linear infinite;
+}
+@keyframes wiggle {
+  from {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-2deg);
+  }
+  30% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(2deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+.Mybutton1 {
+  width: 100%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: orange;
+}
+
+.myList {
+  list-style: none;
+}
+.ListButton {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  border-radius: 3px;
+  border: 1px solid #ee1008;
+  margin: 5px 8px;
+  background-color: rgb(219, 43, 43);
+  cursor: pointer;
+  padding: 3%;
+  color: #fff;
+}
+.ListButton:hover {
+  background-color: rgb(112, 57, 57);
+  border: 1px solid rgb(112, 57, 57);
+  color: #fff;
+}
+.myListButton {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  border-radius: 3px;
+  border: 1px solid #0a8f26;
+  margin: 5px 8px;
+  background-color: #09af54;
+  cursor: pointer;
+  color: #fff;
+  padding: 3%;
+}
+.myListButton:hover {
+  background-color: #165023;
+  border: 1px solid #165023;
+  color: #fff;
+}
+.AddButton {
+  display: inline-block;
+  height: auto;
+  width: 15%;
+  border-radius: 3px;
+  border: 1px solid #0a8f26;
+  margin: 5px 8px;
+  margin-left: -30%;
+  background-color: #09af54;
+  cursor: pointer;
+  color: #fff;
+  padding: 2%;
+}
+.AddButton:hover {
+  background-color: #165023;
+  border: 1px solid #165023;
+  color: #fff;
+}
+#container {
+  width: 105%;
+  margin: auto;
+}
+table {
+  border-collapse: collapse;
+  width: 160%;
+  margin-left: -30%;
+  margin-bottom: 10%;
+  padding: 40px;
+  margin-top: 40px;
+  border-radius: 4px;
+  padding-bottom: 60px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 1px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #ddd;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgb(255, 253, 250);
+  color: rgb(2, 2, 2);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 40%;
+  height: auto;
+  margin-bottom: 10%;
+  padding: 40px;
+  margin-top: 40px;
+  border-radius: 4px;
+  padding-bottom: 60px;
+  background-color: #fff;
+  box-shadow: 0px 0px 2px 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+.CloseButton {
+  background-color: rgb(49, 48, 48);
+  color: rgb(255, 253, 253);
+  font-size: 24px;
+  padding: 2px 6px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  border: rgb(49, 48, 48);
+  top: 0;
+  z-index: 1;
+}
+.CloseButton:hover {
+  background-color: rgb(72, 72, 75);
+  color: #ee1008;
+}
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(58, 53, 53);
+  outline: 1px solid slategrey;
+}
