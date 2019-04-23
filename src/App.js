@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./style/App.css";
 import axios from "axios";
 import Table from "./components/Table";
-import Add from "./components/Add";
+import Add from "./components/CreateAddEmployee";
 
 class App extends Component {
   constructor(props) {
@@ -11,22 +11,20 @@ class App extends Component {
     this.state = {
       details: []
     };
-    this.createEmployees = this.createEmployees.bind(this);
+    this.createEmployee = this.createEmployee.bind(this);
     this.deleteEmployees = this.deleteEmployees.bind(this);
   }
-  createEmployees(details) {
+  createEmployee(employee_name, employee_salary, employee_age) {
+    const employee = {
+      name: employee_name,
+      salary: employee_salary,
+      age: employee_age
+    };
     try {
-      axios({
-        method: "post",
-        url: "http://dummy.restapiexample.com/api/v1/create",
-        data: details
-      }).then(response => {
-        console.log("All Employee Details");
-        console.log(response.data);
-        const employees = this.createEmployees();
-
-        this.setState({ employees });
-      });
+      axios
+        .post("http://dummy.restapiexample.com/api/v1/create", employee)
+        .then(res => console.log(res.data));
+      this.setState({ employee });
     } catch (err) {
       console.log("Error on fetching all employee details");
       console.log(err);
@@ -65,7 +63,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Add createEmployees={this.createEmployees} />
+        <Add CreateAddEmployee createEmployee={this.createEmployee} />
 
         <br />
         <Table />
