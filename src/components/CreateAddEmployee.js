@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 
-class Add extends Component {
+class CreateAddEmployee extends Component {
   constructor(props) {
     super(props);
-
     this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit(event) {
     event.preventDefault();
 
-    this.props.createEmployees(
-      this.employee_nameInput.value,
-      this.employee_salaryInput.value,
-      this.employee_ageInput.value
+    this.props.createEmployee(
+      this.nameInput.value,
+      this.salaryInput.value,
+      this.ageInput.value
     );
+    this.nameInput.value = "";
+    this.salaryInput.value = "";
+    this.ageInput.value = "";
   }
   render() {
     return (
@@ -23,19 +25,19 @@ class Add extends Component {
           <input
             type="text"
             placeholder="Employee Name"
-            ref={nameInput => (this.employee_nameInput = nameInput)}
+            ref={nameInput => (this.nameInput = nameInput)}
             className="formField"
           />
           <input
             type="text"
             placeholder="Salary"
-            ref={salaryInput => (this.employee_salaryInput = salaryInput)}
+            ref={salaryInput => (this.salaryInput = salaryInput)}
             className="formField"
           />
           <input
             type="text"
             placeholder="Age"
-            ref={ageInput => (this.employee_ageInput = ageInput)}
+            ref={ageInput => (this.ageInput = ageInput)}
             className="formField"
           />
           <button className="Mybutton">Submit</button>
@@ -44,4 +46,4 @@ class Add extends Component {
     );
   }
 }
-export default Add;
+export default CreateAddEmployee;
