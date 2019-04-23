@@ -12,7 +12,6 @@ class App extends Component {
       details: []
     };
     this.createEmployee = this.createEmployee.bind(this);
-    this.deleteEmployees = this.deleteEmployees.bind(this);
   }
   createEmployee(employee_name, employee_salary, employee_age) {
     const employee = {
@@ -25,35 +24,7 @@ class App extends Component {
         .post("http://dummy.restapiexample.com/api/v1/create", employee)
         .then(res => console.log(res.data));
       this.setState({ employee });
-    } catch (err) {
-      console.log("Error on fetching all employee details");
-      console.log(err);
-    }
-  }
-  updateEmployees(id, details) {
-    try {
-      axios({
-        method: "put",
-        url: `http://dummy.restapiexample.com/api/v1/update/${id}`,
-        data: details
-      }).then(response => {
-        console.log("All Employee Details");
-        console.log(response.data);
-      });
-    } catch (err) {
-      console.log("Error on fetching all employee details");
-      console.log(err);
-    }
-  }
-  deleteEmployees(id) {
-    try {
-      axios({
-        method: "delete",
-        url: `http://dummy.restapiexample.com/api/v1/delete/${id}`
-      }).then(response => {
-        console.log("All Employee Details");
-        console.log(response.data);
-      });
+      this.getAllEmployees();
     } catch (err) {
       console.log("Error on fetching all employee details");
       console.log(err);
